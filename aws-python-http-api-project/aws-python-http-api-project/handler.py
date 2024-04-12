@@ -1,5 +1,6 @@
 from datetime import datetime
-import boto3
+import boto3 # Boto3, or the AWS SDK for Python, provides
+#                a Python API for AWS infrastructure services. It allows users to directly create, update, and delete AWS resources from their Python scripts. 
 import os
 import uuid
 import json

@@ -62,16 +62,16 @@ functions:
 resources:
  Resources:
    postsTable:
-     Type: AWS::DynamoDB::Table
+     Type: AWS::DynamoDB::Table  
      Properties:
-        AttributeDefinitions:
-          - AttributeName: id
-            AttributeType: S
+        AttributeDefinitions:   
+          - AttributeName: id    # handle ID
+            AttributeType: S     # String 
         KeySchema:
-          - AttributeName: id
-            KeyType: HASH
+          - AttributeName: id    # ID 
+            KeyType: HASH        # use Hashing for partition 
         ProvisionedThroughput:
-          ReadCapacityUnits: 1
+          ReadCapacityUnits: 1    # only one Item at a time 
           WriteCapacityUnits: 1
         TableName: ${self:provider.environment.DYNAMODB_TABLE}
 

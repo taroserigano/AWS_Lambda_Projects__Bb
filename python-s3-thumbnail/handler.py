@@ -20,6 +20,8 @@ dbtable = str(os.environ['DYNAMODB_TABLE'])
 def s3_thumbnail_generator(event, context):
     # parse event
     print("EVENT:::", event)
+
+    # extract bucket_name, object_key, image_size 
     bucket = event['Records'][0]['s3']['bucket']['name']
     key = event['Records'][0]['s3']['object']['key']
     img_size = event['Records'][0]['s3']['object']['size']
